@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+ <meta charset="UTF-8">
+ <title>ระบบสมำชิก</title>
+ <style>
+ body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem;
+}
+ form { display: grid; gap: 0.5rem; margin-bottom: 1.5rem; }
+ table { width: 100%; border-collapse: collapse; }
+ th, td { border: 1px solid #ccc; padding: 0.4rem; text-align: left; }
+ .success { color: green; }
+ .error { color: red; }
+ </style>
+</head>
+<body>
+ <h1>ระบบสมำชิก</h1>
+ <p id="message"></p>
+ <h2>สมัครสมำชิก</h2>
+ <form id="register-form">
+ <input name="username" placeholder="username (a-z, 0-9, _)" required>
+ <input name="name" placeholder="ชื่อ-นำมสกุล" required>
+ <input name="email" type="email" placeholder="อีเมล" required>
+ <input name="password" type="password" placeholder="รหสัผำ่ น (อยำ่ งนอ้ย 8 ตัว)" minlength="8"
+required>
+ <button type="submit">สมัครสมำชิก</button>
+ </form>
+ <h2>เขำ้สู่ระบบ</h2>
+ <form id="login-form">
+ <input name="username" placeholder="username" required>
+ <input name="password" type="password" placeholder="รหสัผำ่ น" required>
+ <button type="submit">เขำ้สู่ระบบ</button>
+ </form>
+ <h2>สมำชิกท้งัหมด</h2>
+ <table>
+ <thead>
+ <tr><th>username</th><th>ชื่อ</th><th>อีเมล</th><th>role</th><th></th></tr>
+ </thead>
+ <tbody id="user-table"></tbody>
+ </table>
+ <script src="script.js"></script>
+</body>
+</html>
